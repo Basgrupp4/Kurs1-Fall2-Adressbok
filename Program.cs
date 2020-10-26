@@ -216,7 +216,7 @@ namespace Basgrupp5_Fall2
 
                         if (person == null)
                         {
-                            Console.WriteLine("Personen du angav finns inte med i kontaktlistan.");
+                            Console.WriteLine("Förnamnet du angav finns inte med i kontaktlistan.");
                             Enter();
                             Console.ReadKey();
                             return;
@@ -234,7 +234,7 @@ namespace Basgrupp5_Fall2
 
                         if (person2 == null)
                         {
-                            Console.WriteLine("Personen du angav finns inte med i kontaktlistan.");
+                            Console.WriteLine("Efternamnet du angav finns inte med i kontaktlistan.");
                             Enter();
                             Console.ReadKey();
                             return;
@@ -253,7 +253,7 @@ namespace Basgrupp5_Fall2
 
                         if (person4 == null)
                         {
-                            Console.WriteLine("Personen du angav finns inte med i kontaktlistan.");
+                            Console.WriteLine("Telefonnumret du angav finns inte med i kontaktlistan.");
                             Enter();
                             Console.ReadKey();
                             return;
@@ -272,7 +272,7 @@ namespace Basgrupp5_Fall2
 
                         if (person5 == null)
                         {
-                            Console.WriteLine("Personen du angav finns inte med i kontaktlistan.");
+                            Console.WriteLine("Telefonnumret du angav finns inte med i kontaktlistan.");
                             Enter();
                             Console.ReadKey();
                             return;
@@ -291,7 +291,7 @@ namespace Basgrupp5_Fall2
 
                         if (person3 == null)
                         {
-                            Console.WriteLine("Personen du angav finns inte med i kontaktlistan.");
+                            Console.WriteLine("Adressen du angav finns inte med i kontaktlistan.");
                             Enter();
                             Console.ReadKey();
                             return;
@@ -310,7 +310,7 @@ namespace Basgrupp5_Fall2
 
                         if (person6 == null)
                         {
-                            Console.WriteLine("Personen du angav finns inte med i kontaktlistan.");
+                            Console.WriteLine("E-mail-adressen du angav finns inte med i kontaktlistan.");
                             Enter();
                             Console.ReadKey();
                             return;
