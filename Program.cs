@@ -94,7 +94,7 @@ namespace Basgrupp5_Fall2
             if (person == null)
             {
                 Console.WriteLine("Personen du angav finns inte med i kontaktlistan.");
-                Menu();
+                Enter();
                 Console.ReadKey();
                 return;
             }
