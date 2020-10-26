@@ -70,7 +70,7 @@ namespace Basgrupp5_Fall2
             if (People.Count == 0)
             {
                 Console.WriteLine("Din kontaktlista är tom.");
-                Menu();
+                Enter();
                 Console.ReadKey();
                 return;
             }
