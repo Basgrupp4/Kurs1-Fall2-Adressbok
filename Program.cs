@@ -110,46 +110,42 @@ namespace Basgrupp5_Fall2
                         person.EditFirst();
                         Console.WriteLine("\n Redigera förnamn: ");
                         person.FirstName = Console.ReadLine();
-                        PrintPerson(person);
-                        //Edit();
+                        PrintPerson(person);                        
                         break;
                     case "b":
                         person.EditFirst2();
                         Console.WriteLine("\n Redigera efternamn: ");
                         person.LastName = Console.ReadLine();
-                        PrintPerson(person);
-                        //Edit();
+                        PrintPerson(person);                        
                         break;
                     case "c":
                         person.EditFirst3();
                         Console.WriteLine("\n Redigera hemnummer: ");
                         person.PhoneNumber1 = Console.ReadLine();
-                        PrintPerson(person);
-                        //Edit();
+                        PrintPerson(person);                        
                         break;
                     case "d":
                         person.EditFirst4();
                         Console.WriteLine("\n Redigera jobbnummer: ");
                         person.PhoneNumber2 = Console.ReadLine();
-                        PrintPerson(person);
-                        //Edit();
+                        PrintPerson(person);                        
                         break;
                     case "e":
                         person.EditFirst5();
                         Console.WriteLine("\n Redigera adress: ");
                         person.Address = Console.ReadLine();
-                        PrintPerson(person);
-                        //Edit();
+                        PrintPerson(person);                        
                         break;
                     case "f":
                         person.EditFirst6();
                         Console.WriteLine("\n Redigera email: ");
                         person.Email = Console.ReadLine();
-                        PrintPerson(person);
-                        //Edit();
+                        PrintPerson(person);                        
                         break;
                     default:
                         Console.Clear();
+                        Console.WriteLine("Felaktig inmatning, försök igen\n");
+                        Enter();
                         Console.ReadKey();
                         break;
 
@@ -322,6 +318,8 @@ namespace Basgrupp5_Fall2
                         break;
                     default:
                         Console.Clear();
+                        Console.WriteLine("Felaktig inmatning, försök igen\n");
+                        Enter();
                         Console.ReadKey();
                         break;
 
@@ -358,7 +356,7 @@ namespace Basgrupp5_Fall2
                     default:
                         Console.Clear();
                         Console.WriteLine("Felaktig inmatning, försök igen\n");
-                        Menu();
+                        Enter();
                         Console.ReadKey();
                         break;
                 }
