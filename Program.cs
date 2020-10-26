@@ -191,7 +191,7 @@ namespace Basgrupp5_Fall2
             string command = "";
             while (command != "exit")
             {
-                //Console.Clear();
+                
 
                 Search();
                 command = Console.ReadLine().ToLower();
@@ -210,11 +210,9 @@ namespace Basgrupp5_Fall2
                             return;
                         }
 
-                        PrintPerson(person);
-                        Console.WriteLine(person);
+                        PrintPerson(person);                        
                         Enter();
                         Console.ReadKey();
-
 
                         break;
                     case "b":
@@ -230,8 +228,7 @@ namespace Basgrupp5_Fall2
                             return;
                         }
 
-                        PrintPerson(person2);
-                        Console.WriteLine(person2);
+                        PrintPerson(person2);                        
                         Enter();
                         Console.ReadKey();
 
@@ -250,8 +247,7 @@ namespace Basgrupp5_Fall2
                             return;
                         }
 
-                        PrintPerson(person4);
-                        Console.WriteLine(person4);
+                        PrintPerson(person4);                        
                         Enter();
                         Console.ReadKey();
 
@@ -270,8 +266,7 @@ namespace Basgrupp5_Fall2
                             return;
                         }
 
-                        PrintPerson(person5);
-                        Console.WriteLine(person5);
+                        PrintPerson(person5);                        
                         Enter();
                         Console.ReadKey();
 
@@ -290,8 +285,7 @@ namespace Basgrupp5_Fall2
                             return;
                         }
 
-                        PrintPerson(person3);
-                        Console.WriteLine(person3);
+                        PrintPerson(person3);                        
                         Enter();
                         Console.ReadKey();
 
@@ -310,8 +304,7 @@ namespace Basgrupp5_Fall2
                             return;
                         }
 
-                        PrintPerson(person6);
-                        Console.WriteLine(person6);
+                        PrintPerson(person6);                        
                         Enter();
                         Console.ReadKey();
 
