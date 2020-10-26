@@ -110,37 +110,49 @@ namespace Basgrupp5_Fall2
                         person.EditFirst();
                         Console.WriteLine("\n Redigera förnamn: ");
                         person.FirstName = Console.ReadLine();
-                        PrintPerson(person);                        
+                        PrintPerson(person);
+                        Enter();
+                        Console.ReadKey();
                         break;
                     case "b":
                         person.EditFirst2();
                         Console.WriteLine("\n Redigera efternamn: ");
                         person.LastName = Console.ReadLine();
-                        PrintPerson(person);                        
+                        PrintPerson(person);
+                        Enter();
+                        Console.ReadKey();
                         break;
                     case "c":
                         person.EditFirst3();
                         Console.WriteLine("\n Redigera hemnummer: ");
                         person.PhoneNumber1 = Console.ReadLine();
-                        PrintPerson(person);                        
+                        PrintPerson(person);
+                        Enter();
+                        Console.ReadKey();
                         break;
                     case "d":
                         person.EditFirst4();
                         Console.WriteLine("\n Redigera jobbnummer: ");
                         person.PhoneNumber2 = Console.ReadLine();
-                        PrintPerson(person);                        
+                        PrintPerson(person);
+                        Enter();
+                        Console.ReadKey();
                         break;
                     case "e":
                         person.EditFirst5();
                         Console.WriteLine("\n Redigera adress: ");
                         person.Address = Console.ReadLine();
-                        PrintPerson(person);                        
+                        PrintPerson(person);
+                        Enter();
+                        Console.ReadKey();
                         break;
                     case "f":
                         person.EditFirst6();
                         Console.WriteLine("\n Redigera email: ");
                         person.Email = Console.ReadLine();
-                        PrintPerson(person);                        
+                        PrintPerson(person);
+                        Enter();
+                        Console.ReadKey();
                         break;
                     default:
                         Console.Clear();
