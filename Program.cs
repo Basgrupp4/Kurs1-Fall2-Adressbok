@@ -9,23 +9,26 @@ namespace Basgrupp5_Fall2
     class Program
     {
         public static List<Person> People = new List<Person>();
-        static void Menu()
+        static void Menu() /*Våran initiala plan var att vi skulle kunna återvända till Menyn efter varje metod och skapade
+                            därför en Menu-metod. I slutändan använde vi den bara på ett ställe, men behåller den ändå här*/
         {
             Console.WriteLine("___________________________________________ \n");
             Console.WriteLine("Var vänlig att ange en siffra för kommando: \n1 - Lägg till \n2 - Lista \n3 - Redigera \n4 - Radera \n5 - Sök");
         }
-        static void Edit()
+        static void Edit() /*Till att börja med hade vi tänkt återvända till Edit för att kunna redigera samma kontakt på flera 
+                            sätt, vi skapade dock en loop vi inte kunde ta oss ur, så därför tog vi bort den*/
         {
             Console.WriteLine("___________________________________________ \n");
             Console.WriteLine("Vad vill du redigera? \na - Förnamn\nb - Efternamn\nc - Hemnummer\nd - Jobbnummer\ne - Adress\nf - Email\n");
         }
 
-        static void Enter()
+        static void Enter() /*Istället för meny-metoden ovan blev den här användbar som avslut i alla metoder för att få tillbaka
+                             användaren till menyvalen*/
         {
             Console.WriteLine("Tryck enter för att återvända till Menyn.");
         }
 
-        static void Search()
+        static void Search()//även denna metod hade vi planerat använda mer
         {
             Console.WriteLine("___________________________________________ \n");
             Console.WriteLine("Vad vill du söka efter? \na - Förnamn\nb - Efternamn\nc - Hemnummer\nd - Jobbnummer\ne - Adress\nf - Email\n");
@@ -89,7 +92,9 @@ namespace Basgrupp5_Fall2
         {
             Console.WriteLine("Skriv in förnamnet på personen du vill redigera.");
             string Name = Console.ReadLine();
-            Person person = People.FirstOrDefault(x => x.FirstName.ToLower() == Name.ToLower());
+            Person person = People.FirstOrDefault(x => x.FirstName.ToLower() == Name.ToLower()); 
+            /*vi använde ToLower för att  underlätta så det inte spelar roll om användaren skriver gemener eller versaler, 
+             används genomgående i koden*/ 
 
             if (person == null)
             {
@@ -154,7 +159,7 @@ namespace Basgrupp5_Fall2
                         Enter();
                         Console.ReadKey();
                         break;
-                    default:
+                    default: //Vi la in ett felmeddelande för de fall då användaren inte skriver in accepterade värden för metoden
                         Console.Clear();
                         Console.WriteLine("Felaktig inmatning, försök igen\n");
                         Enter();
@@ -182,6 +187,7 @@ namespace Basgrupp5_Fall2
 
             PrintPerson(person);
             Console.WriteLine("Är du säker på att du vill radera den här kontakten från din kontaktlista? (J/N)");
+            //vi ville ha en bekräftelse från användaren innan radering i fall av felinmatning
 
 
             if (Console.ReadKey().Key == ConsoleKey.J)
@@ -321,13 +327,12 @@ namespace Basgrupp5_Fall2
                         Console.ReadKey();
 
                         break;
-                    default:
+                    default: //återigen ett felmeddelande ifall användaren skriver in ett val som inte finns
                         Console.Clear();
                         Console.WriteLine("Felaktig inmatning, försök igen\n");
                         Enter();
                         Console.ReadKey();
                         break;
-
                 }
                 return;
             }
@@ -338,7 +343,8 @@ namespace Basgrupp5_Fall2
             string command = "";
             while (command != "exit")
             {
-                Console.Clear();
+                Console.Clear(); /*medan vi vill hålla mycket information i konsolfönstret kändes det rörigt att inte tömma ut det 
+                                  när vi återvände till menyn*/
                 Menu();
                 command = Console.ReadLine().ToLower();
                 switch (command)
@@ -358,7 +364,7 @@ namespace Basgrupp5_Fall2
                     case "5":
                         SearchPerson();
                         break;
-                    default:
+                    default: //även här har vi feedback när användaren fyller i ej godkända värden.
                         Console.Clear();
                         Console.WriteLine("Felaktig inmatning, försök igen\n");
                         Enter();

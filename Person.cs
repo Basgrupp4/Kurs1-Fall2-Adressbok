@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Basgrupp5_Fall2
 {
     public class Person
+        //vi valde att ha en klass för person där vi kunde hämta informationen för varje kontakt
     {
 
         public string FirstName { get; set; }
@@ -16,7 +17,7 @@ namespace Basgrupp5_Fall2
         public string Address { get; set; }
         public string Email { get; set; }
 
-
+        //Nedan kan man redigera kontaktinformationen via edit-metoden:
         public string EditFirst(string FirstName = "")
         {
             this.FirstName = FirstName;
