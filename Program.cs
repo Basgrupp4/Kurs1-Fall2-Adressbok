@@ -28,7 +28,7 @@ namespace Basgrupp5_Fall2
             Console.WriteLine("Tryck enter för att återvända till Menyn.");
         }
 
-        static void Search()//även denna metod hade vi planerat använda mer
+        static void Search()//även denna metod hade vi planerat att använda mer
         {
             Console.WriteLine("___________________________________________ \n");
             Console.WriteLine("Vad vill du söka efter? \na - Förnamn\nb - Efternamn\nc - Hemnummer\nd - Jobbnummer\ne - Adress\nf - Email\n");
@@ -38,22 +38,22 @@ namespace Basgrupp5_Fall2
             Person person = new Person();
 
             Console.Write("Skriv in förnamn: ");
-            person.FirstName = Console.ReadLine();
+            person.firstName = Console.ReadLine();
 
             Console.Write("Skriv in efternamn: ");
-            person.LastName = Console.ReadLine();
+            person.lastName = Console.ReadLine();
 
             Console.Write("Skriv in telefonnummer hem: ");
-            person.PhoneNumber1 = Console.ReadLine();
+            person.phoneNumber1 = Console.ReadLine();
 
             Console.WriteLine("Skriv in telefonnummer jobb: ");
-            person.PhoneNumber2 = Console.ReadLine();
+            person.phoneNumber2 = Console.ReadLine();
 
             Console.Write("Skriv in adress: ");
-            person.Address = Console.ReadLine();
+            person.address = Console.ReadLine();
 
             Console.Write("Skriv in e-mail: ");
-            person.Email = Console.ReadLine();
+            person.emailAddress = Console.ReadLine();
 
 
             People.Add(person);
@@ -61,12 +61,12 @@ namespace Basgrupp5_Fall2
         private static void PrintPerson(Person person)
         {
 
-            Console.WriteLine("Förnamn: " + person.FirstName);
-            Console.WriteLine("Efternamn: " + person.LastName);
-            Console.WriteLine("Telefonnummer Hem: " + person.PhoneNumber1);
-            Console.WriteLine("Telefonnummer Jobb: " + person.PhoneNumber2);
-            Console.WriteLine("Adress: " + person.Address);
-            Console.WriteLine("E-mail: " + person.Email);
+            Console.WriteLine("Förnamn: " + person.firstName);
+            Console.WriteLine("Efternamn: " + person.lastName);
+            Console.WriteLine("Telefonnummer Hem: " + person.phoneNumber1);
+            Console.WriteLine("Telefonnummer Jobb: " + person.phoneNumber2);
+            Console.WriteLine("Adress: " + person.address);
+            Console.WriteLine("E-mail: " + person.emailAddress);
         }
         private static void ListPeople()
         {
@@ -92,7 +92,7 @@ namespace Basgrupp5_Fall2
         {
             Console.WriteLine("Skriv in förnamnet på personen du vill redigera.");
             string Name = Console.ReadLine();
-            Person person = People.FirstOrDefault(x => x.FirstName.ToLower() == Name.ToLower()); 
+            Person person = People.FirstOrDefault(x => x.firstName.ToLower() == Name.ToLower()); 
             /*vi använde ToLower för att  underlätta så det inte spelar roll om användaren skriver gemener eller versaler, 
              används genomgående i koden*/ 
 
@@ -114,7 +114,7 @@ namespace Basgrupp5_Fall2
                     case "a":
                         person.EditFirst();
                         Console.WriteLine("\n Redigera förnamn: ");
-                        person.FirstName = Console.ReadLine();
+                        person.firstName = Console.ReadLine();
                         PrintPerson(person);
                         Enter();
                         Console.ReadKey();
@@ -122,7 +122,7 @@ namespace Basgrupp5_Fall2
                     case "b":
                         person.EditFirst2();
                         Console.WriteLine("\n Redigera efternamn: ");
-                        person.LastName = Console.ReadLine();
+                        person.lastName = Console.ReadLine();
                         PrintPerson(person);
                         Enter();
                         Console.ReadKey();
@@ -130,7 +130,7 @@ namespace Basgrupp5_Fall2
                     case "c":
                         person.EditFirst3();
                         Console.WriteLine("\n Redigera hemnummer: ");
-                        person.PhoneNumber1 = Console.ReadLine();
+                        person.phoneNumber1 = Console.ReadLine();
                         PrintPerson(person);
                         Enter();
                         Console.ReadKey();
@@ -138,7 +138,7 @@ namespace Basgrupp5_Fall2
                     case "d":
                         person.EditFirst4();
                         Console.WriteLine("\n Redigera jobbnummer: ");
-                        person.PhoneNumber2 = Console.ReadLine();
+                        person.phoneNumber2 = Console.ReadLine();
                         PrintPerson(person);
                         Enter();
                         Console.ReadKey();
@@ -146,7 +146,7 @@ namespace Basgrupp5_Fall2
                     case "e":
                         person.EditFirst5();
                         Console.WriteLine("\n Redigera adress: ");
-                        person.Address = Console.ReadLine();
+                        person.address = Console.ReadLine();
                         PrintPerson(person);
                         Enter();
                         Console.ReadKey();
@@ -154,7 +154,7 @@ namespace Basgrupp5_Fall2
                     case "f":
                         person.EditFirst6();
                         Console.WriteLine("\n Redigera email: ");
-                        person.Email = Console.ReadLine();
+                        person.emailAddress = Console.ReadLine();
                         PrintPerson(person);
                         Enter();
                         Console.ReadKey();
@@ -173,9 +173,9 @@ namespace Basgrupp5_Fall2
         }
         private static void RemovePerson()
         {
-            Console.WriteLine("Skriv in förnamnnet på personen du vill radera.");
+            Console.WriteLine("Skriv in förnamnet på personen du vill radera.");
             string Name = Console.ReadLine();
-            Person person = People.FirstOrDefault(x => x.FirstName.ToLower() == Name.ToLower());
+            Person person = People.FirstOrDefault(x => x.firstName.ToLower() == Name.ToLower());
 
             if (person == null)
             {
@@ -218,7 +218,7 @@ namespace Basgrupp5_Fall2
                     case "a":
                         Console.WriteLine("Skriv in förnamnet på kontakten du vill hitta.");
                         string Name = Console.ReadLine();
-                        Person person = People.FirstOrDefault(x => x.FirstName.ToLower() == Name.ToLower());
+                        Person person = People.FirstOrDefault(x => x.firstName.ToLower() == Name.ToLower());
 
                         if (person == null)
                         {
@@ -236,7 +236,7 @@ namespace Basgrupp5_Fall2
                     case "b":
                         Console.WriteLine("Skriv in efternamnet på kontakten du vill hitta.");
                         string lastName = Console.ReadLine();
-                        Person person2 = People.FirstOrDefault(x => x.LastName.ToLower() == lastName.ToLower());
+                        Person person2 = People.FirstOrDefault(x => x.lastName.ToLower() == lastName.ToLower());
 
                         if (person2 == null)
                         {
@@ -255,7 +255,7 @@ namespace Basgrupp5_Fall2
                     case "c":
                         Console.WriteLine("Skriv in Telefonnumret (Hem) tillhörande kontakten du vill hitta.");
                         string phoneNumber1 = Console.ReadLine();
-                        Person person4 = People.FirstOrDefault(x => x.PhoneNumber1.ToLower() == phoneNumber1.ToLower());
+                        Person person4 = People.FirstOrDefault(x => x.phoneNumber1.ToLower() == phoneNumber1.ToLower());
 
                         if (person4 == null)
                         {
@@ -274,7 +274,7 @@ namespace Basgrupp5_Fall2
                     case "d":
                         Console.WriteLine("Skriv in Telefonnumret (Jobb) tillhörande kontakten du vill hitta.");
                         string phoneNumber2 = Console.ReadLine();
-                        Person person5 = People.FirstOrDefault(x => x.PhoneNumber2.ToLower() == phoneNumber2.ToLower());
+                        Person person5 = People.FirstOrDefault(x => x.phoneNumber2.ToLower() == phoneNumber2.ToLower());
 
                         if (person5 == null)
                         {
@@ -293,7 +293,7 @@ namespace Basgrupp5_Fall2
                     case "e":
                         Console.WriteLine("Skriv in adressen tillhörande kontakten du vill hitta.");
                         string Address = Console.ReadLine();
-                        Person person3 = People.FirstOrDefault(x => x.Address.ToLower() == Address.ToLower());
+                        Person person3 = People.FirstOrDefault(x => x.address.ToLower() == Address.ToLower());
 
                         if (person3 == null)
                         {
@@ -312,7 +312,7 @@ namespace Basgrupp5_Fall2
                     case "f":
                         Console.WriteLine("Skriv in E-mail-adressen tillhörande kontakten du vill hitta.");
                         string email = Console.ReadLine();
-                        Person person6 = People.FirstOrDefault(x => x.Email.ToLower() == email.ToLower());
+                        Person person6 = People.FirstOrDefault(x => x.emailAddress.ToLower() == email.ToLower());
 
                         if (person6 == null)
                         {
